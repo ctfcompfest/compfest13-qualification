@@ -1,0 +1,92 @@
+[
+   {
+      "model":"auth.user",
+      "pk":1,
+      "fields":{
+         "password":"pbkdf2_sha256$260000$7cp1jioMxjcNyABiBxIJgH$wRWo1IrhE1+53jo78pPhq3odBJKR9NcxfElwCQbzJMM=",
+         "last_login":"2021-07-30T14:45:25.405Z",
+         "is_superuser":false,
+         "username":"richGuy",
+         "first_name":"",
+         "last_name":"",
+         "email":"",
+         "is_staff":false,
+         "is_active":true,
+         "date_joined":"2021-07-30T14:23:47.514Z",
+         "groups":[
+            
+         ],
+         "user_permissions":[
+            
+         ]
+      }
+   },
+   {
+      "model":"auth.user",
+      "pk":2,
+      "fields":{
+         "password":"pbkdf2_sha256$260000$B4jS9o805WTj5gt0S7bAwX$2KZwb4RrEnx+fGRmvaEDTVLrhZWoL0/cRxxEklG4Mng=",
+         "last_login":null,
+         "is_superuser":false,
+         "username":"poke_poko",
+         "first_name":"",
+         "last_name":"",
+         "email":"",
+         "is_staff":false,
+         "is_active":true,
+         "date_joined":"2021-07-30T14:24:54.257Z",
+         "groups":[
+            
+         ],
+         "user_permissions":[
+            
+         ]
+      }
+   },
+   {
+      "model":"auth.user",
+      "pk":3,
+      "fields":{
+         "password":"pbkdf2_sha256$260000$Yg4DRcIH2ao62uEvuMfNIu$PraFAsk2jBQJVRs49udttWiDAL+/g76h/kOVrE5nhjY=",
+         "last_login":null,
+         "is_superuser":false,
+         "username":"nyanCatz",
+         "first_name":"",
+         "last_name":"",
+         "email":"",
+         "is_staff":false,
+         "is_active":true,
+         "date_joined":"2021-07-30T14:25:25.503Z",
+         "groups":[
+            
+         ],
+         "user_permissions":[
+            
+         ]
+      }
+   },
+   {
+      "model":"accmanager.accountmodel",
+      "pk":1,
+      "fields":{
+         "balance":50,
+         "transaction_password":"pbkdf2_sha256$260000$T6PXZZGiqwAuh5NkzAe1mZ$GpNWge3piV4XDrNHIR6bOQqy/2W5ENkBoH7x7EGxqjo="
+      }
+   },
+   {
+      "model":"accmanager.accountmodel",
+      "pk":2,
+      "fields":{
+         "balance":50,
+         "transaction_password":"pbkdf2_sha256$260000$q3lSaygZhRxeVz7PkTBEMI$2TmUkNDIkQFlfcTW7E2gFhtPm5DDFjtbjI8o0qdcYXg="
+      }
+   },
+   {
+      "model":"accmanager.accountmodel",
+      "pk":3,
+      "fields":{
+         "balance":50,
+         "transaction_password":"pbkdf2_sha256$260000$nmFkDsexoYh1Ve0K0bdKQc$2GrVmn/0FbGKDJjZ/V8HwYmHzIPdFScNhIt+OfguKkM="
+      }
+   }
+]

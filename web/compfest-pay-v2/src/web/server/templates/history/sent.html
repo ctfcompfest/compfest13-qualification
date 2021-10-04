@@ -1,0 +1,96 @@
+{% extends '../base.html' %}
+{% load money_format %}
+
+{% block title %}Sent | {% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="fw-bold h2 mb-4">Sent</h1>
+  {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" role="alert">{{message}}</div>
+  {% endfor %}
+  <table class="table table-hover align-middle">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 15% !important;">Transaction ID</th>
+        <th scope="col" style="width: 8% !important;">Date</th>
+        <th scope="col" style="width: 10% !important;">Recipient</th>
+        <th scope="col" style="width: 9% !important;">Amount</th>
+        <th scope="col" class="w-50">
+          Message (Double click to edit)
+        </th>
+        <th scope="col" style="width: 5% !important"></th>
+      </tr>
+    </thead>
+    <tbody id="table-history">
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center align-items-center">
+    <nav>
+      <ul class="pagination">
+        {% if page.0 > 0 %}
+        <li class="page-item"><a class="page-link" href="?page={{ page.0 }}">&lt;</a></li>
+        {% endif %}
+        <li class="page-item active"><a class="page-link">{{ page.1 }}</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ page.2 }}">&gt;</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+{% include './delete.html' %}
+{% include './edit.html' %}
+{% endblock %}
+
+{% block customjs %}
+<script>
+  let editModal = new bootstrap.Modal($('#edit-trx-modal'))
+
+  function moneyFormat(num) {
+    return (num).toFixed(0).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  }
+
+  function parseData(data) {
+    for(elm of data){
+      let d = new Date(elm.date);
+      let html = `<tr>
+          <td>${elm.id}</td>
+          <td>${d.toLocaleString()}</td>
+          <td>${elm.recipient.username}</td>
+          <td>ξ${moneyFormat(elm.amount)}</td>
+          <td class="trx-msg" data-id="${elm.id}">${elm.msg}</td>
+          <td>
+            <button class="btn btn-danger btn-delete-trx" data-id="${elm.id}" data-bs-toggle="modal" data-bs-target="#delete-trx-modal">
+              <i class="fa fa-trash"></i>
+            </button>
+          </td>
+        </tr>`
+      $("#table-history").append(html)
+    }
+    $('.trx-msg').dblclick(function(){
+      let id = $(this).attr("data-id")
+      let url = "{% url 'transaction:update' '<id>' %}"
+      $("#inpID").val(id)
+      $("#inpMessage").text($(this).html())
+      $("#edit-trx-form").attr("action", url.replace("%3Cid%3E", id))
+      
+      editModal.show()
+    })
+    $('.btn-delete-trx').click(function(){
+      let id = $(this).attr("data-id")
+      let url = "{% url 'transaction:delete' '<id>' %}"
+      $('#delete-trx-label').html(id)
+      $('#delete-trx-btn').attr("href", url.replace("%3Cid%3E", id))
+    })
+  }
+
+  function getData() {
+    let param = window.location.search
+    let url = "{% url 'api:sent' %}"
+    $.getJSON(url + param, function(data){
+      parseData(data['data'])
+    })
+  }
+
+  $(getData)
+</script>
+{% endblock %}

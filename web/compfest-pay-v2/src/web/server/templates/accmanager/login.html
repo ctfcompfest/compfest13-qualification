@@ -1,0 +1,34 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Login | {% endblock %}
+
+{% block content %}
+<div class="container py-5 justify-content-center">
+  <h1 class="display-6 text-center fw-bold pb-3">Login</h1>
+	<form method="post" class="col-lg-4 mx-auto">
+    {% csrf_token %}
+		<div class="mb-3">
+			<label for="inputUsername" class="form-label">Username</label>
+			<input type="text" class="form-control" id="inputUsername" name="username" value="{{form.username.value}}" required>
+      {% if form.username.errors %}
+      <div class="form-text" style="color: red;">{{form.username.errors.0}}</div>
+      {% endif %}
+		</div>
+    <div class="mb-3">
+			<label for="inputPassword" class="form-label">Password</label>
+			<input type="password" class="form-control" id="inputPassword" name="password" required>
+      {% if form.password.errors %}
+      <div class="form-text" style="color: red;">{{form.password.errors.0}}</div>
+      {% endif %}
+		</div>
+    <div class="text-center mb-5">
+      <button class="btn btn-lg btn-primary btn-block mx-auto" type="submit" id="btn-login">Open Wallet</button>
+    </div>
+    <div>
+      Don't have an account yet? 
+      <a class="mylink" href="{% url 'accmanager:register' %}">Register now</a>
+    </div>
+	</form>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Dashboard | {% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a id="submenu-wallet" class="nav-link round active" href="#wallet">
+        <i class="fa fa-wallet"></i> &nbsp;
+        My wallet
+      </a>
+    </li>
+    <li class="nav-item">
+      <a id="submenu-send" class="nav-link round" href="#send">
+        <i class="fa fa-coins"></i> &nbsp;
+        Send money
+      </a>
+    </li>
+    <li class="nav-item">
+      <a id="submenu-flag" class="nav-link round" href="#flag">
+        <i class="fa fa-flag"></i> &nbsp;
+        Buy flag
+      </a>
+    </li>
+  </ul>
+</div>
+{% include './wallet.html' %}
+{% include './send.html' %}
+{% include './flag.html' %}
+{% endblock %}
+
+{% block customjs %}
+<script>
+  function changeSubmenu(url) {
+    if (url == undefined)
+      url = window.location.href
+    url = url.split("/")
+
+    let menu = url[url.length - 1]
+    let menuLst = ["#wallet", "#flag", "#send"]
+    if (menuLst.indexOf(menu) == -1) menu = "#wallet"
+
+    $(".round").removeClass("active")
+    menuLst.forEach(elm => {
+      $(elm).hide();
+    });
+
+    $(menu).show()
+    $(menu.replace("#", "#submenu-")).addClass("active")
+  }
+
+  $(() => {
+    changeSubmenu()
+  })
+  $("a[href^='#']").click(function(){
+    changeSubmenu(this.href)
+  });
+
+</script>
+{% endblock %}

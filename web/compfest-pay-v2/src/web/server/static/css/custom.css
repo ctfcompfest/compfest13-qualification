@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+# Button Section
+--------------------------------------------------------------*/
+.btn-primary {
+    color: #fff !important;
+    background: #7700ff !important;
+    border-color: #7700ff !important;
+}
+
+.btn-primary:hover {
+    color: #fff !important;
+    border-color: #5700bb !important;
+    background: #5700bb !important;
+}
+
+.btn-outline-primary {
+    border-color: #7700ff !important;
+    color: #7700ff !important;
+}
+
+.btn-outline-primary:hover {
+    border-color: #5700bb !important;
+    background: #5700bb !important;
+}
+
+.mylink {
+    text-decoration: none;
+    font-weight: 700;
+    color: inherit;
+}
+
+.mylink:hover {
+    color: #5700bb !important;
+}
+
+/*--------------------------------------------------------------
+# Navbar Section
+--------------------------------------------------------------*/
+
+.navbar-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.navbar-nav a:hover, .navbar-nav .active, .navbar-nav .active:focus, .navbar-nav li:hover > a {
+    color: #7700ff !important;
+    background-color: transparent;
+}
+
+.navbar-nav .btn {
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+  
+.navbar-nav .btn:hover {
+    font-weight: 700;
+    color: #fff !important;
+}
+
+
+/*--------------------------------------------------------------
+# Submenu Section
+--------------------------------------------------------------*/
+.round {
+    border-radius: 1.5rem !important;
+    border: 1px solid #7700ff !important;
+    margin: 0 5px;
+    color: #7700ff;
+}
+
+.round.active {
+    background-color: #5700bb !important;
+}
+
+.round:hover {
+    background-color: #5700bb;
+    color: white;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #7700ff !important;
+    border-color: #7700ff !important;
+}
+
+.alert-error {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}

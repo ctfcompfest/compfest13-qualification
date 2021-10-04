@@ -26,10 +26,10 @@ This repository contains the problem set of qualification and mirror contests fr
 | [Love Your Brain Extended](reverse-engineering/love-your-brain-extended) | xMaximusKl | Reverse Engineering |
 | [Magical Mystery Club](reverse-engineering/magical-mystery-club) | sl0ck | Reverse Engineering |
 | [Pave The Way](reverse-engineering/pave-the-way) | Bonceng | Reverse Engineering |
-| Chasing The Flag! | Hori75 | Web |
-| COMPFEST IDE | Bonceng | Web |
-| COMPFEST Pay v2 | Bonceng | Web |
-| Hospital Donation | Bonceng | Web |
+| [Chasing The Flag!](web/chasing-the-flag) | Hori75 | Web |
+| [COMPFEST IDE](web/compfest-ide) | Bonceng | Web |
+| [COMPFEST Pay v2](web/compfest-pay-v2) | Bonceng | Web |
+| [Hospital Donation](web/hospital-donation) | Bonceng | Web |
 
 ## Folder Structure
 ```md

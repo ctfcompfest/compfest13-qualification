@@ -1,0 +1,41 @@
+{% load static %}
+{% load money_format %}
+
+<div id="wallet" class="container mt-3">
+  <div class="row text-center justified-content-center">
+    <svg class="col-lg-6 mx-auto my-auto" viewBox="0 0 1476 851" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+      <image width="1480.2185" height="851.23047" preserveAspectRatio="none" x="-4" y="0" xlink:href="{% static 'image/card-bg.png' %}"/>
+      <image width="140.09122" height="140.09122" preserveAspectRatio="none" x="83.333305" y="78.295456" xlink:href="{% static 'image/compfest-white.png' %}"/>
+      <text text-anchor="end" x="1375" y="425" style="font-weight:700;fill:#ffffff;font-size:60px;line-height:1.25;font-family:Nunito,sans-serif;">
+        {{ user.username|upper }}
+      </text>
+      <text text-anchor="end" x="1375" y="550" style="font-size:85px;fill:#ffffff;font-weight:300;line-height:1.25;font-family:Nunito,sans-serif;">
+        ξ{{ balance|moneyfmt }}
+      </text>
+      <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;fill:#000000;fill-opacity:1;stroke:none" transform="matrix(1.4496535,0,0,1.4496535,44.74953,-959.80216)">
+          <tspan x="140.89453" y="749.05469" style="font-weight:700;font-family:Nunito, sans-serif;fill:#ffffff">COMPFEST</tspan>
+          <tspan x="140.89453" y="800.66406" style="font-weight:700;font-family:Nunito, sans-serif;fill:#ffffff">Pay</tspan>
+      </text>
+    </svg>
+    <div class="col-lg-4 me-auto">
+      <div class="col">
+        <div class="my-3 p-5 bg-body rounded shadow-sm d-flex justified-content-center">
+          <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="65" height="65" src="{% static 'image/trxin.svg' %}"></img>
+          <div class="mx-auto">   
+            <h6 class="pb-2 mb-0 h3 fw-bold">{{ transaction_received }}</h6>
+            <h6 class="pb-2 mb-0 h5">Transaction Received</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="my-3 p-5 bg-body rounded shadow-sm d-flex justified-content-center">
+          <img class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="65" height="65" src="{% static 'image/trxout.svg' %}"></img>
+          <div class="mx-auto">   
+            <h6 class="pb-2 mb-0 h3 fw-bold">{{ transaction_sent }}</h6>
+            <h6 class="pb-2 mb-0 h5">Transaction Sent</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

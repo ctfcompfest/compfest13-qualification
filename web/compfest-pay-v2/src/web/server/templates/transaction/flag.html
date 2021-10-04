@@ -1,0 +1,25 @@
+{% load static %}
+{% load money_format %}
+
+<div id="flag" class="container mt-3" style="display: none;">
+    <div class="row justified-content-center">
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" role="alert">{{message}}</div>
+    {% endfor %}  
+    <div class="col-lg-4 mx-auto my-3 p-3 bg-body rounded shadow-sm">
+      <h6 class="h4 border-bottom pb-2 mb-0 fw-bold">Buy flag</h6>
+      <form class="mt-3" method="post" action="{% url 'transaction:flag' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="inpFlag" class="form-label">Flag Price</label>
+          <input type="text" class="form-control" id="inpFlag" value="ξ{{flagprice|moneyfmt}}" disabled readonly>
+        </div>
+        <div class="mb-3">
+          <label for="inpTrxPassword" class="form-label">Transaction Password</label>
+          <input type="password" class="form-control" id="inpTrxPassword" name="transaction_password" required>
+        </div>
+        <button type="submit" class="btn btn-primary float-end">Buy</button>
+      </form>
+    </div>
+  </div>
+</div>

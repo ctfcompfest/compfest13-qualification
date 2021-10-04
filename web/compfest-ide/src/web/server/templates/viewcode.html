@@ -1,0 +1,102 @@
+{% extends './base.html' %}
+
+{% block title %}{{id}} | {% endblock %}
+
+{% block customcss %}
+<style>
+    .btn-edit {
+        color:rgb(0, 170, 255) !important;
+        text-decoration: none;
+    }
+    .btn-edit:hover {
+        color: #0086c9 !important;
+        text-decoration: none;
+    }
+</style>
+{% endblock %}
+
+{% block contents %}
+{% if illegal %}
+<div class="alert alert-danger" style="text-shadow: none;" role="alert">
+    Cannot update code. You have illegal syntax!
+</div>
+{% endif %}
+<div class="d-flex mb-3 justify-content-center" style="border-bottom: 1px solid #8e8e8e;">
+    <p class="mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/></svg>
+        source code
+    </p>
+    <div class="mb-0 ml-auto">
+        <a href="javascript:startEdit();" class="btn-edit" id="btn-edit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg>
+            edit
+        </a>
+    </div>
+</div>
+
+<div id="editor" class="w-100 h-50">{{code}}</div>
+<div class="d-flex mt-2 justify-content-end" id="btn-editor" style="display:none!important;">
+    <button onclick="location.reload();" class="btn btn-sm btn-secondary mx-2" style="font-family:'VT323',monospace;font-size:24px;font-weight:200;"><strong>cancel</strong></button>
+    <form method="POST">
+        <textarea id="editor-data" name="code" hidden></textarea>
+        <button onclick="submitUpdate()" class="btn btn-sm btn-success" type="submit" style="font-family:'VT323',monospace;font-size:24px;font-weight:200;"><strong>save</strong></button>
+    </form>
+</div>
+
+<p class="pt-3" style="border-bottom: 1px solid #8e8e8e;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+    </svg>
+    stdout
+</p>
+<code style="color:white;">
+{% if stt %}
+{{out}}
+{% else %}
+<div class="spinner-border text-light" role="status"><span class="sr-only">Loading...</span></div>
+{% endif %}
+</code>
+
+<p class="pt-3" style="border-bottom: 1px solid #8e8e8e;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-octagon" viewBox="0 0 16 16">
+        <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>
+        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+    </svg>
+    stderr
+</p>
+<code style="color:white;">
+{% if stt %}
+{{err}}
+{% else %}
+<div class="spinner-border text-light" role="status"><span class="sr-only">Loading...</span></div>
+{% endif %}
+</code>
+{% endblock %}
+
+{% block customjs %}
+<script>
+    var editor = ace.edit("editor");
+    editor.setOptions({
+        fontSize: 18,
+        newLineMode: 'unix',
+        theme: 'ace/theme/monokai',
+        mode: 'ace/mode/sh',
+        readOnly: true
+    });
+
+    function startEdit() {
+        $('#btn-editor').show();
+        $('#btn-edit').hide();
+        editor.setReadOnly(false);
+    }
+
+    function submitUpdate() {
+        document.getElementById('editor-data').innerHTML = editor.getValue();
+        return true;
+    }
+</script>
+{% endblock %}

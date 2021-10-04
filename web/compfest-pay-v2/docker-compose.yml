@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    build:
+      context: src/web
+    ports:
+      - "9999:80"
+    restart: always
+    mem_limit: '1024m'
+    ulimits: 
+      nofile: 100
+  bot:
+    build:
+      context: src/bot
+    environment: 
+      - HOST=http://web:80
+      - ACC_USERNAME=richGuy
+      - ACC_PASSWORD=IniPasswordAmanGakMungkinKetahuan13
+    depends_on: 
+      - web
+    restart: always
+    mem_limit: '1024m'

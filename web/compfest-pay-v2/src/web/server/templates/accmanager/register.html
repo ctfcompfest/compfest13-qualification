@@ -1,0 +1,50 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Register | {% endblock %}
+
+{% block content %}
+<div class="container py-5 justify-content-center">
+  <h1 class="display-6 text-center fw-bold pb-3">Register</h1>
+	<form method="post" class="col-lg-4 mx-auto">
+    {% csrf_token %}
+		<div class="mb-3">
+			<label for="inputUsername" class="form-label">Username</label>
+			<input type="text" class="form-control" id="inputUsername" name="username" required value="{{form.username.value}}">
+      {% if form.username.errors %}
+      <div class="form-text" style="color: red;">{{form.username.errors.0}}</div>
+      {% endif %}
+		</div>
+    <div class="mb-3">
+			<label for="inputPassword" class="form-label">Password</label>
+			<input type="password" class="form-control" id="inputPassword" name="password" required>
+		</div>
+    <div class="mb-3">
+			<label for="inputTrxPass" class="form-label">Transaction Password</label>
+			<input type="password" class="form-control" id="inputTrxPass" name="transaction_password" required>
+		</div>
+    <input type="hidden" id="inputCaptcha0" name="captcha_0" class="form-control" required value="{{ captcha_key }}">
+    <div class="mb-3">
+			<label for="inputCaptcha" class="form-label">Captcha</label>
+      <div class="row">
+        <div class="col-3">
+          <img class="align-middle" src="/captcha/image/{{ captcha_key }}/">
+        </div>
+        <div class="col-9">
+          <input type="text" class="form-control" id="inputCaptcha" name="captcha_1" required>
+        </div>
+      </div>
+      {% if form.captcha.errors %}
+      <div class="form-text" style="color: red;">{{form.captcha.errors.0}}</div>
+      {% endif %}
+    </div>
+    <div class="text-center mb-5">
+      <button class="btn btn-lg btn-primary btn-block mx-auto" type="submit">Create Account</button>
+    </div>
+    <div>
+      Already have an account?
+      <a class="mylink" href="{% url 'accmanager:login' %}">Login here</a>
+    </div>
+	</form>
+</div>
+{% endblock %}

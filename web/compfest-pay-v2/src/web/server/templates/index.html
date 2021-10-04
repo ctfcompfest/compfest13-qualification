@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="p-3 mb-4 rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Easier and More Secure!</h1>
+      <p class="col-md-8 fs-4">After last year's failure, we come back with a stronger security system, new interfaces, and many additional features to make your transaction easier. We also give free credit to the new account.</p>
+      <a class="btn btn-primary btn-lg fw-bold" href="{% url 'accmanager:register' %}">
+        Join now!
+      </a>
+    </div>
+  </div>
+</div>
+<div class="bg-white">
+  <div class="text-center py-5 container">
+    <h1 class="h6 fw-bold" style="color: #5700bb !important;">HALL OF FAME</h1>
+    <h1 class="display-6 fw-bold pb-3">Most Loyal Clients</h1>
+  
+    <div class="row pt-4 justify-content-center">
+      <div class="col-lg-4 p-3 my-2">
+        <i class="fas fa-crown fa-2x text-warning"></i>
+        <h3 class="display-5 fw-bold">1st</h3>
+        <h3 class="h4">
+          richGuy
+        </h3>
+        <span class="bg-success" style="height: 15px;width: 15px;border-radius: 50%;display: inline-block;"></span>
+        Online
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 p-3 mx-auto my-2">
+        <i class="fas fa-crown fa-2x" style="color: silver;"></i>
+        <h3 class="display-5 fw-bold">2nd</h3>
+        <h3 class="h4">
+          poke_poko
+        </h3>
+        <span class="bg-secondary" style="height: 15px;width: 15px;border-radius: 50%;display: inline-block;"></span>
+        Offline
+      </div>
+      <div class="col-lg-4 p-3 mx-auto my-2">
+        <i class="fas fa-crown fa-2x" style="color:#b08d57;"></i>
+        <h3 class="display-5 fw-bold">3rd</h3>
+        <h3 class="h4">
+          nyanCatz
+        </h3>
+        <span class="bg-secondary" style="height: 15px;width: 15px;border-radius: 50%;display: inline-block;"></span>
+        Offline
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

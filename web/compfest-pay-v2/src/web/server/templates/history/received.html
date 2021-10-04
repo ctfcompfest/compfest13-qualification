@@ -1,0 +1,66 @@
+{% extends '../base.html' %}
+{% load money_format %}
+
+{% block title %}Received | {% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="fw-bold h2 mb-4">Received</h1>
+  <table class="table table-hover align-middle">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 20% !important;">Transaction ID</th>
+        <th scope="col" style="width: 8% !important;">Date</th>
+        <th scope="col" style="width: 13% !important;">Sender</th>
+        <th scope="col" style="width: 9% !important;">Amount</th>
+        <th scope="col" class="w-50">Message</th>
+      </tr>
+    </thead>
+    <tbody id="table-history">
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-center align-items-center">
+    <nav>
+      <ul class="pagination">
+        {% if page.0 > 0 %}
+        <li class="page-item"><a class="page-link" href="?page={{ page.0 }}">&lt;</a></li>
+        {% endif %}
+        <li class="page-item active"><a class="page-link">{{ page.1 }}</a></li>
+        <li class="page-item"><a class="page-link" href="?page={{ page.2 }}">&gt;</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block customjs %}
+<script>
+  function moneyFormat(num) {
+    return (num).toFixed(0).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  }
+
+  function parseData(data) {
+    for(elm of data){
+      let d = new Date(elm.date);
+      let html = `<tr>
+          <td>${elm.id}</td>
+          <td>${d.toLocaleString()}</td>
+          <td>${elm.sender.username}</td>
+          <td>ξ${moneyFormat(elm.amount)}</td>
+          <td class="trx-msg" data-id="${elm.id}">${elm.msg}</td>
+        </tr>`
+      $("#table-history").append(html)
+    }
+  }
+
+  function getData() {
+    let param = window.location.search
+    let url = "{% url 'api:received' %}"
+    $.getJSON(url + param, function(data){
+      parseData(data['data'])
+    })
+  }
+
+  $(getData)
+</script>
+{% endblock %}
