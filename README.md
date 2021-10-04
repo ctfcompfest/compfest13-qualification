@@ -26,6 +26,10 @@ This repository contains the problem set of qualification and mirror contests fr
 | Love Your Brain Extended | xMaximusKl | Reverse Engineering |
 | Magical Mystery Club | sl0ck | Reverse Engineering |
 | Pave The Way | Bonceng | Reverse Engineering |
+| Chasing The Flag! | Hori75 | Web |
+| COMPFEST IDE | Bonceng | Web |
+| COMPFEST Pay v2 | Bonceng | Web |
+| Hospital Donation | Bonceng | Web |
 
 ## Folder Structure
 ```md
@@ -46,6 +50,7 @@ This repository contains the problem set of qualification and mirror contests fr
 We would like to thank you, Universitas Indonesia, all the COMPFEST committees, the problem setter for the amazing challenge:
 * [Bonceng](https://github.com/faishol01)
 * [houseoforion](https://github.com/haikalrmn)
+* [Hori75](https://github.com/Hori75)
 * [prajnapras19](https://github.com/prajnapras19)
 * [sl0ck](https://github.com/Slickerius)
 * [xMaximusKl](https://github.com/dirtboll)
