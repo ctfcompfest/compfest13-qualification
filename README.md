@@ -39,15 +39,15 @@ This repository contains the problem set of qualification and mirror contests fr
         ├─ public/
         │   └─ (files that are given to participants)
         ├─ src/
-        │   └─ (source if there's any)
+        │   └─ (source for the problem service or to generate attachment)
         ├─ writeup/
-        │   └─ (solution for the problem, if there's any)
-        ├─ docker-compose.yml (if there's any)
+        │   └─ (solution for the problem)
+        ├─ docker-compose.yml (for problem services)
         └─ README.md
 ```
 
 ## Contributors
-We would like to thank you, Universitas Indonesia, all the COMPFEST committees, the problem setter for the amazing challenge:
+We would like to thank you, Universitas Indonesia, all the COMPFEST committees, and the problem setter for the amazing challenges:
 * [Bonceng](https://github.com/faishol01)
 * [houseoforion](https://github.com/haikalrmn)
 * [Hori75](https://github.com/Hori75)
