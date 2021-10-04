@@ -22,10 +22,10 @@ This repository contains the problem set of qualification and mirror contests fr
 | Baby JS | Bonceng | Miscellaneous |
 | Promotional Video | prajnapras19 | Miscellaneous |
 | WaifuDroid | sl0ck | Miscellaneous |
-| Binary Pin | Bonceng | Reverse Engineering |
-| Love Your Brain Extended | xMaximusKl | Reverse Engineering |
-| Magical Mystery Club | sl0ck | Reverse Engineering |
-| Pave The Way | Bonceng | Reverse Engineering |
+| [Binary Pin](reverse-engineering/binary-pin) | Bonceng | Reverse Engineering |
+| [Love Your Brain Extended](reverse-engineering/love-your-brain-extended) | xMaximusKl | Reverse Engineering |
+| [Magical Mystery Club](reverse-engineering/magical-mystery-club) | sl0ck | Reverse Engineering |
+| [Pave The Way](reverse-engineering/pave-the-way) | Bonceng | Reverse Engineering |
 | Chasing The Flag! | Hori75 | Web |
 | COMPFEST IDE | Bonceng | Web |
 | COMPFEST Pay v2 | Bonceng | Web |
