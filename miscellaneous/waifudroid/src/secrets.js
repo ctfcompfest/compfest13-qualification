@@ -1,0 +1,1 @@
+module.exports.secret = [`Oh wow, you seem to know a lot about these parts, so I guess I'll tell you something even though I'm not supposed to. Nobody will know anyway am I right? \`COMPFEST13{s4nDB0x3d_w41fUu_n3VeR_46a1N_c779251ea6}\`\nhttps://www.youtube.com/watch?v=uRQ7ecvU56k`];

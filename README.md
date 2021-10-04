@@ -19,9 +19,9 @@ This repository contains the problem set of qualification and mirror contests fr
 | Firewall-ed | Avilia | Forensic |
 | Naomi Gives Noises | houseoforion | Forensic |
 | VidCap | xMaximusKl | Forensic |
-| Baby JS | Bonceng | Miscellaneous |
-| Promotional Video | prajnapras19 | Miscellaneous |
-| WaifuDroid | sl0ck | Miscellaneous |
+| [Baby JS](miscellaneous/baby-js) | Bonceng | Miscellaneous |
+| [Promotional Video](miscellaneous/promotional-video) | prajnapras19 | Miscellaneous |
+| [WaifuDroid](miscellaneous/waifudroid) | sl0ck | Miscellaneous |
 | [Binary Pin](reverse-engineering/binary-pin) | Bonceng | Reverse Engineering |
 | [Love Your Brain Extended](reverse-engineering/love-your-brain-extended) | xMaximusKl | Reverse Engineering |
 | [Magical Mystery Club](reverse-engineering/magical-mystery-club) | sl0ck | Reverse Engineering |

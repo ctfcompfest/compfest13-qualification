@@ -1,0 +1,17 @@
+{
+  "name": "baby-js",
+  "version": "1.0.0",
+  "description": "COMPFEST CTF 13 Preliminary Challenge - Baby JS",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "json-decycle": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js",
+    "debug": "nodemon -L index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

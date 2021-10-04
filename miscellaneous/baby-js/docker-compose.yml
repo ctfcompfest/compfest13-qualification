@@ -1,0 +1,6 @@
+version: "3"
+services: 
+  web:
+    build: src/web
+    ports: 
+      - "9999:3000"
