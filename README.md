@@ -14,11 +14,11 @@ This repository contains the problem set of qualification and mirror contests fr
 | [Secure Channel](cryptography/secure-channel) | prajnapras19 | Cryptography |
 | [Snab? Yes, Snab](cryptography/snab-yes-snab) | houseoforion | Cryptography |
 | [You AES Me Up](cryptography/you-aes-me-up) | prajnapras19 | Cryptography |
-| alogus | houseoforion | Forensic |
-| Chocolate With Nuts | houseoforion | Forensic |
-| Firewall-ed | Avilia | Forensic |
-| Naomi Gives Noises | houseoforion | Forensic |
-| VidCap | xMaximusKl | Forensic |
+| [alogus](forensic/alogus) | houseoforion | Forensic |
+| [Chocolate With Nuts](forensic/chocolates-with-nuts) | houseoforion | Forensic |
+| [FIrewall-ed](forensic/firewall-ed) | Avilia | Forensic |
+| [Naomi Gives Noises](forensic/naomi-gives-noises) | houseoforion | Forensic |
+| [VidCap](forensic/vidcap) | xMaximusKl | Forensic |
 | [Baby JS](miscellaneous/baby-js) | Bonceng | Miscellaneous |
 | [Promotional Video](miscellaneous/promotional-video) | prajnapras19 | Miscellaneous |
 | [WaifuDroid](miscellaneous/waifudroid) | sl0ck | Miscellaneous |

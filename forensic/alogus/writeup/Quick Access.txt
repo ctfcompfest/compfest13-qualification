@@ -1,0 +1,29 @@
+Drive Link:
+https://drive.google.com/file/d/1V1bEBWNN_BpioPxNuMi53oBzAtJ2xACE/view?usp=sharing
+
+ORION-PC_150820211534.zip Pass:
+Ch4LlEnGgE alogus p4sSWORDny4 In1
+
+Dillan_Duck.zip Pass:
+h0rs3sHoe t4bl3top eutr0ph1cAtIoN
+
+Flag (from a.png):
+sU5tos0_S4nt0so_5b2e135
+
+Script:
+Good afternoon Mr. Santoso, sorry to interrupt, may I ask for the password of the important file you provided?
+That's right, sir, you have given each password and file to each employee, but I forgot to write down mine
+Ok, thanks for the password, sir, I'll be more attentive next time.
+h0rs3sHoe t4bl3top eutr0ph1cAtIoN
+
+Actual Key logs: 
+b'g o o g l e Key.space c h r o m e '
+b'Key.shift Y o u t u b e '
+b'Key.shift T h e Key.space o n l y Key.space t h i n g Key.space t h e y Key.space f e a r Key.space i s Key.space y o u '
+b'Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift P o m o d o r o Key.space Key.shift T e c h n i q u e '
+b'Key.shift H o w Key.space t o Key.space t a k Key.backspace l k Key.space p r o p e r l y Key.space w i t h Key.space y o u r Key.space b o s s '
+b'Key.shift G o o d Key.space a f t e r n o o n , Key.space Key.shift M r Key.space Key.shift S a n t o s o . Key.space Key.shift S o r r y Key.space t o Key.space i n t e r r u p t . Key.space Key.shift M a y Key.space Key.shift I Key.space a s k Key.space f o r Key.space t h e Key.space p a s s w o r d Key.space o f Key.space t h e Key.space i m p o r t a n t Key.space z i p Key.space f i l e Key.space y o u Key.space p r o v i d e d Key.shift ? '
+b"Key.shift T h a t ' s Key.space r i g h t , Key.space Key.shift S i r . Key.space Key.shift Key.shift Key.shift Y o u Key.space h a v e Key.space g i v e n Key.space e a c h Key.space p a s s w o r d Key.space a n d Key.space f i l e Key.space t o Key.space e a c h Key.space e m p l o y e e . Key.space Key.shift I Key.space f o r g o 
+t Key.space t o Key.space w r i t e Key.space d o w n Key.space m i n e . "
+b"Key.shift T h a n k Key.space y o u Key.space f o r Key.space t h e Key.space p a s s w o r d , Key.space Key.shift S i r . Key.space Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift Key.shift I ' l l Key.space b e Key.space m o r e Key.space a t t e n t i v e Key.space n e x t Key.space t i m e . "
+b'h 0 o o Key.backspace Key.backspace r s e Key.backspace 3 s Key.shift H o e Key.space t 4 b l 3 t o p Key.space e u t r 0 p h i Key.backspace c Key.shift A t Key.shift I o Key.shift N Key.backspace Key.backspace Key.backspace Key.backspace Key.backspace Key.backspace 1 c Key.shift A t Key.shift I o n Key.backspace Key.shift J Key.backspace Key.shift N '
