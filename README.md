@@ -5,11 +5,11 @@ This repository contains the problem set of qualification and mirror contests fr
 ## Table of Contents
 | Problem Title | Author | Category |
 | --- | ----------- | ----------- |
-| BrainSim | xMaximusKl | Binary Exploitation |
-| Kode Buta | hhh | Binary Exploitation |
-| Mine | prajnapras19 | Binary Exploitation |
-| Moneypoly | prajnapras19 | Binary Exploitation |
-| Shop Manager | prajnapras19 | Binary Exploitation |
+| [BrainSim](binary-exploitation/brainsim) | xMaximusKl | Binary Exploitation |
+| [Kode Buta](binary-exploitation/kode-buta) | hhh | Binary Exploitation |
+| [Mine](binary-exploitation/mine) | prajnapras19 | Binary Exploitation |
+| [Moneypoly](binary-exploitation/moneypoly) | prajnapras19 | Binary Exploitation |
+| [Shop Manager](binary-exploitation/shop-manager) | prajnapras19 | Binary Exploitation |
 | Junior Signing System | prajnapras19 | Cryptography |
 | Secure Channel | prajnapras19 | Cryptography |
 | Snab? Yes, Snab | houseoforion | Cryptography |
