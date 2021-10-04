@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    build: src
+    ports:
+        - "9990:9990"
+        - "9991:9991"
+        - "9992:9992"

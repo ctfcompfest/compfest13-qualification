@@ -10,10 +10,10 @@ This repository contains the problem set of qualification and mirror contests fr
 | [Mine](binary-exploitation/mine) | prajnapras19 | Binary Exploitation |
 | [Moneypoly](binary-exploitation/moneypoly) | prajnapras19 | Binary Exploitation |
 | [Shop Manager](binary-exploitation/shop-manager) | prajnapras19 | Binary Exploitation |
-| Junior Signing System | prajnapras19 | Cryptography |
-| Secure Channel | prajnapras19 | Cryptography |
-| Snab? Yes, Snab | houseoforion | Cryptography |
-| You AES Me Up | prajnapras19 | Cryptography |
+| [Junior Signing System](cryptography/junior-signing-system) | prajnapras19 | Cryptography |
+| [Secure Channel](cryptography/secure-channel) | prajnapras19 | Cryptography |
+| [Snab? Yes, Snab](cryptography/snab-yes-snab) | houseoforion | Cryptography |
+| [You AES Me Up](cryptography/you-aes-me-up) | prajnapras19 | Cryptography |
 | alogus | houseoforion | Forensic |
 | Chocolate With Nuts | houseoforion | Forensic |
 | Firewall-ed | Avilia | Forensic |
